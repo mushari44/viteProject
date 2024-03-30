@@ -8,6 +8,10 @@ import UserGreeting from "./UserGreeting.jsx";
 import List from "./List.jsx";
 import MyComponent from "./MyComponent.jsx";
 import Counter from "./Counter.jsx";
+import OnChange from "./OnChange.jsx";
+import ColorPicker from "./ColorPicker.jsx";
+import UpdateObject from "./UpdateObject.jsx";
+import UpdateArray from "./UpdateArray.jsx";
 function App() {
   const fruits = [
     { id: 1, name: "bananas", calories: 95 },
@@ -25,6 +29,11 @@ function App() {
   ];
   return (
     <>
+      <UpdateArray></UpdateArray>
+      <UpdateObject />
+      <ColorPicker />
+      <OnChange />
+
       <Counter />
       <MyComponent />
       <Student name="Mushari" age={1} isStudent={true} />

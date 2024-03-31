@@ -2,13 +2,15 @@ import { useState } from "react";
 
 function UpdateArray() {
   const [foods, setFoods] = useState(["Apple", "Orange", "Banana"]);
-
+  const [errorMessage, setErrorMessage] = useState("");
   function handleAddFood() {
     const newFood = document.getElementById("foodInput").value;
-    if (newFood != "") {
+    if (newFood.trim() !== "") {
       setFoods((prevFoods) => [...prevFoods, newFood]);
       document.getElementById("foodInput").value = "";
-      console.log(newFood);
+      setErrorMessage("");
+    } else {
+      setErrorMessage("Please enter a food");
     }
   }
   function handleRemoveItem(index) {
@@ -30,8 +32,11 @@ function UpdateArray() {
           </li>
         ))}
       </ul>
+      {/* If errorMessage is truthy (i.e., not an empty string, null, or undefined)
+      <h3>{errorMessage}</h3> will be rendered. */}
+      {errorMessage ? <h3>{errorMessage}</h3> : null}
       <input type="text" placeholder="Enter food name" id="foodInput"></input>
-      <button onClick={handleAddFood}>Add food</button>
+      <button onClick={() => handleAddFood()}>Add food</button>
     </div>
   );
 }

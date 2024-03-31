@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 function UpdateObject() {
   const [car, setCar] = useState({
     year: 2024,

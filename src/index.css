@@ -1,4 +1,7 @@
-  .card {
+body {
+  margin: 0px;
+}
+.card {
   border: 2px solid hsl(0, 0%, 80%);
   border-radius: 10px;
   box-shadow: 1px 1px 10px;
@@ -110,4 +113,45 @@
   width: 100px;
   height: 50;
   border-radius: 10%;
+}
+
+.ToDoCard {
+  background-color: #212121;
+  color: #dfdfdf; /* Lighter text color for paragraphs */
+  padding-bottom: 30px;
+  text-align: center;
+}
+.ToDoCard h1 {
+  margin-top: 0px;
+  padding-top: 20px;
+}
+.ToDoCard li {
+  border-radius: 10px;
+  border: 8px solid;
+  color: black;
+  font-size: 22px;
+  margin: 20px;
+  background-color: #dfdfdf;
+  display: flex;
+}
+.ToDoCard li p {
+  /* if you delete "flex: 1" the will push all the elements to the far left (try it) */
+  flex: 1;
+  text-align: center;
+  color: #212121;
+  margin-left: 222px;
+  /* margin: 20px; */
+}
+
+.ToDoCard button {
+  font-family: cursive;
+  cursor: pointer;
+  padding: 10px 15px;
+  background-color: #212121;
+  border-color: black;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px 1px;
+  color: #dfdfdf;
+  margin: 5px;
+  margin-right: 20px;
 }

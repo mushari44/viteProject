@@ -12,6 +12,8 @@ import OnChange from "./OnChange.jsx";
 import ColorPicker from "./ColorPicker.jsx";
 import UpdateObject from "./UpdateObject.jsx";
 import UpdateArray from "./UpdateArray.jsx";
+import UpdateArrayOfObject from "./UpdateArrayOfObject.jsx";
+import ToDo from "./ToDo.jsx";
 function App() {
   const fruits = [
     { id: 1, name: "bananas", calories: 95 },
@@ -29,6 +31,8 @@ function App() {
   ];
   return (
     <>
+      <ToDo></ToDo>
+      <UpdateArrayOfObject></UpdateArrayOfObject>
       <UpdateArray></UpdateArray>
       <UpdateObject />
       <ColorPicker />
